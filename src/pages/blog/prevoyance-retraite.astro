@@ -2,531 +2,138 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-
-const article = {
-	title: "Prévoyance retraite : comment bien anticiper et protéger son avenir ?",
-	date: "7 novembre 2025",
-	category: "Epargner",
-	categoryLink: "/epargner",
-	image: "https://cdn.prod.website-files.com/679ce3ae6891cff458859b15/68c3dfd00f69cfc50bae29d5_prevoyance%20retraite.png",
-	readTime: "8 min de lecture"
-};
+import BlogArticle from '../../components/BlogArticle.astro';
 ---
 
-<Layout title={`${article.title} - Retraite Libre`}>
+<Layout title="Prevoyance retraite : comment bien anticiper et proteger son avenir ? - Retraite Libre">
 	<Header />
-	<main>
-		<!-- Article Hero - Image gauche, Titre droite -->
-		<section class="article-hero">
-			<div class="container">
-				<div class="article-hero-grid">
-					<div class="article-hero-image">
-						<img src={article.image} alt={article.title} />
-					</div>
-					<div class="article-hero-content">
-						<a href={article.categoryLink} class="article-category">{article.category}</a>
-						<h1>{article.title}</h1>
-						<div class="article-meta-info">
-							<span class="article-date">Mis à jour le {article.date}</span>
-							<span class="article-read-time">{article.readTime}</span>
-						</div>
-						<div class="article-share">
-							<span>Partager cet article</span>
-							<div class="share-buttons">
-								<a href="#" class="share-btn facebook" aria-label="Partager sur Facebook">
-									<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-								</a>
-								<a href="#" class="share-btn twitter" aria-label="Partager sur Twitter">
-									<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
-								</a>
-								<a href="#" class="share-btn linkedin" aria-label="Partager sur LinkedIn">
-									<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
+	<BlogArticle
+		title="Prevoyance retraite : comment bien anticiper et proteger son avenir ?"
+		date="7 novembre 2025"
+		category="Epargner"
+		categoryLink="/epargner"
+		image="https://cdn.prod.website-files.com/679ce3ae6891cff458859b15/68c3dfd00f69cfc50bae29d5_prevoyance%20retraite.png"
+		readTime="8 min de lecture"
+		ctaText="Nos experts sont la pour vous accompagner dans vos choix de prevoyance."
+	>
+		<Fragment slot="content">
+			<p class="article-intro">
+				Partir a la retraite n'est pas seulement une etape administrative ou un changement de rythme de vie : c'est aussi le moment ou certains risques deviennent plus visibles. Meme si votre situation financiere est stable et que vos besoins ne changent pas drastiquement, la fin de la couverture prevoyance de votre entreprise peut laisser un vide important. La prevoyance retraite est alors un outil essentiel pour se proteger et proteger sa famille contre l'incertitude, qu'il s'agisse d'un accident, d'une maladie grave, d'une perte d'autonomie ou du deces premature.
+			</p>
+
+			<p>
+				Contrairement a la complementaire sante, obligatoire et maintenue pour les salaries grace a la loi Evin, la prevoyance collective proposee par l'entreprise n'est pas systematique et disparait generalement au moment de la retraite. Cela signifie qu'un retraite peut se retrouver sans protection pour certains risques, sauf s'il choisit de souscrire un contrat individuel. Anticiper cette etape est donc essentiel pour garantir une continuite de protection adaptee a votre situation.
+			</p>
+
+			<h2>Comprendre les solutions de prevoyance retraite</h2>
+
+			<p>
+				La prevoyance retraite peut se structurer autour de dispositifs collectifs et individuels. Les contrats collectifs, comme les Plans d'Epargne Retraite (PER) d'entreprise, offrent l'avantage d'un cadre fiscal favorable et d'une gestion souvent simplifiee.
+			</p>
+
+			<h3>Dispositifs collectifs</h3>
+
+			<ul>
+				<li>
+					<strong>PER d'entreprise obligatoire :</strong> alimente par des cotisations de l'employeur et parfois du salarie, il garantit une sortie a la retraite sous forme de rente viagere, assurant un complement de revenus stable tout au long de la retraite.
+				</li>
+				<li>
+					<strong>PER d'entreprise collectif :</strong> facultatif, il permet au salarie de choisir ses versements et de beneficier eventuellement d'abondements de l'employeur.
+				</li>
+			</ul>
+
+			<p>
+				Ces dispositifs remplacent progressivement les anciens contrats comme les "articles 83" ou Perco, aujourd'hui fermes a la souscription.
+			</p>
+
+			<h3>Prevoyance individuelle</h3>
+
+			<p>
+				Pour ceux qui ne disposent pas de solutions collectives ou qui souhaitent completer leur couverture, la prevoyance retraite individuelle constitue une alternative flexible. Elle comprend differentes options selon vos besoins et votre budget :
+			</p>
+
+			<ul>
+				<li>
+					<strong>Assurance deces :</strong> versement d'un capital ou d'une rente aux proches, avec des options pour doubler le capital en cas d'accident ou le transformer en rente en cas de perte d'autonomie.
+				</li>
+				<li>
+					<strong>Assurance obseques :</strong> financement et organisation des funerailles pour soulager vos proches et respecter vos dernieres volontes.
+				</li>
+				<li>
+					<strong>Garantie dependance ou perte d'autonomie :</strong> versement d'une rente viagere ou d'un capital pour adapter son logement et compenser l'assistance necessaire au quotidien.
+				</li>
+			</ul>
+
+			<h2>L'epargne comme pilier de la prevoyance retraite</h2>
+
+			<p>
+				Au-dela des assurances, l'epargne est essentielle pour completer vos revenus et securiser votre futur :
+			</p>
+
+			<ul>
+				<li>
+					<strong>Assurance vie :</strong> produit flexible avec capital garanti ou supports plus dynamiques, permettant de preparer un complement de revenus ou de transmettre un capital, avec des avantages fiscaux interessants a long terme.
+				</li>
+				<li>
+					<strong>PER individuel :</strong> ouvert a tous, il permet de se constituer une epargne retraite independante de l'entreprise, avec possibilite de sortie en capital, en rente, ou mixte.
+				</li>
+			</ul>
+
+			<p>
+				Ces produits offrent egalement une certaine flexibilite : rachat partiel ou total possible sous conditions, fiscalite avantageuse selon la duree du contrat et les situations personnelles. La question qui se pose alors est : faut-il prendre un <a href="/blog/pel-ou-per">per ou pel</a> pour optimiser sa prevoyance retraite et completer ses revenus ? Cette decision depend de vos objectifs : securite du capital, avantages fiscaux ou complement de revenu a long terme.
+			</p>
+
+			<h2>Comment choisir sa prevoyance retraite ?</h2>
+
+			<p>
+				Pour choisir un contrat adapte, il faut examiner plusieurs elements :
+			</p>
+
+			<ul>
+				<li>L'etendue des garanties et les exclusions.</li>
+				<li>Le niveau du capital ou de la rente et le mode de versement.</li>
+				<li>Le cout des cotisations et les options supplementaires.</li>
+				<li>Les conditions de sortie et les avantages fiscaux.</li>
+				<li>Votre situation familiale, age et objectifs patrimoniaux.</li>
+			</ul>
+
+			<p>
+				Faire appel a un conseiller specialise permet de realiser un diagnostic personnalise et d'adapter votre couverture a vos besoins reels, afin de securiser vos proches et preserver votre autonomie.
+			</p>
+
+			<h2>Preparer sa retraite, c'est anticiper les imprevus</h2>
+
+			<p>
+				La prevoyance retraite n'est pas seulement un complement de revenus : elle protege contre les aleas de la vie, tout en permettant de preserver l'autonomie et la qualite de vie des retraites et de leurs proches. Qu'il s'agisse de contrats collectifs d'entreprise, d'assurances individuelles ou de solutions d'epargne comme l'assurance vie et le PER individuel, chacun peut trouver une formule adaptee.
+			</p>
+
+			<div class="article-callout">
+				<p>
+					Anticiper des maintenant, se renseigner sur les garanties disponibles et ajuster sa couverture a ses besoins reels est la cle pour vivre sa retraite sereinement. La prevoyance retraite devient ainsi un outil de liberte et de securite, protegeant vos proches, preservant votre autonomie et garantissant la tranquillite d'esprit face a l'avenir.
+				</p>
 			</div>
-		</section>
+		</Fragment>
 
-		<!-- Article Content -->
-		<article class="article-content">
-			<div class="container">
-				<div class="article-wrapper">
-					<div class="article-body">
-						<p class="article-intro">
-							Partir à la retraite n'est pas seulement une étape administrative ou un changement de rythme de vie : c'est aussi le moment où certains risques deviennent plus visibles. Même si votre situation financière est stable et que vos besoins ne changent pas drastiquement, la fin de la couverture prévoyance de votre entreprise peut laisser un vide important. La prévoyance retraite est alors un outil essentiel pour se protéger et protéger sa famille contre l'incertitude, qu'il s'agisse d'un accident, d'une maladie grave, d'une perte d'autonomie ou du décès prématuré.
-						</p>
-
-						<p>
-							Contrairement à la complémentaire santé, obligatoire et maintenue pour les salariés grâce à la loi Evin, la prévoyance collective proposée par l'entreprise n'est pas systématique et disparaît généralement au moment de la retraite. Cela signifie qu'un retraité peut se retrouver sans protection pour certains risques, sauf s'il choisit de souscrire un contrat individuel. Anticiper cette étape est donc essentiel pour garantir une continuité de protection adaptée à votre situation.
-						</p>
-
-						<h2>Comprendre les solutions de prévoyance retraite</h2>
-
-						<p>
-							La prévoyance retraite peut se structurer autour de dispositifs collectifs et individuels. Les contrats collectifs, comme les Plans d'Épargne Retraite (PER) d'entreprise, offrent l'avantage d'un cadre fiscal favorable et d'une gestion souvent simplifiée.
-						</p>
-
-						<h3>Dispositifs collectifs</h3>
-
-						<ul>
-							<li>
-								<strong>PER d'entreprise obligatoire :</strong> alimenté par des cotisations de l'employeur et parfois du salarié, il garantit une sortie à la retraite sous forme de rente viagère, assurant un complément de revenus stable tout au long de la retraite.
-							</li>
-							<li>
-								<strong>PER d'entreprise collectif :</strong> facultatif, il permet au salarié de choisir ses versements et de bénéficier éventuellement d'abondements de l'employeur.
-							</li>
-						</ul>
-
-						<p>
-							Ces dispositifs remplacent progressivement les anciens contrats comme les « articles 83 » ou Perco, aujourd'hui fermés à la souscription.
-						</p>
-
-						<h3>Prévoyance individuelle</h3>
-
-						<p>
-							Pour ceux qui ne disposent pas de solutions collectives ou qui souhaitent compléter leur couverture, la prévoyance retraite individuelle constitue une alternative flexible. Elle comprend différentes options selon vos besoins et votre budget :
-						</p>
-
-						<ul>
-							<li>
-								<strong>Assurance décès :</strong> versement d'un capital ou d'une rente aux proches, avec des options pour doubler le capital en cas d'accident ou le transformer en rente en cas de perte d'autonomie.
-							</li>
-							<li>
-								<strong>Assurance obsèques :</strong> financement et organisation des funérailles pour soulager vos proches et respecter vos dernières volontés.
-							</li>
-							<li>
-								<strong>Garantie dépendance ou perte d'autonomie :</strong> versement d'une rente viagère ou d'un capital pour adapter son logement et compenser l'assistance nécessaire au quotidien.
-							</li>
-						</ul>
-
-						<h2>L'épargne comme pilier de la prévoyance retraite</h2>
-
-						<p>
-							Au-delà des assurances, l'épargne est essentielle pour compléter vos revenus et sécuriser votre futur :
-						</p>
-
-						<ul>
-							<li>
-								<strong>Assurance vie :</strong> produit flexible avec capital garanti ou supports plus dynamiques, permettant de préparer un complément de revenus ou de transmettre un capital, avec des avantages fiscaux intéressants à long terme.
-							</li>
-							<li>
-								<strong>PER individuel :</strong> ouvert à tous, il permet de se constituer une épargne retraite indépendante de l'entreprise, avec possibilité de sortie en capital, en rente, ou mixte.
-							</li>
-						</ul>
-
-						<p>
-							Ces produits offrent également une certaine flexibilité : rachat partiel ou total possible sous conditions, fiscalité avantageuse selon la durée du contrat et les situations personnelles. La question qui se pose alors est : faut-il prendre un <a href="/blog/pel-ou-per">per ou pel</a> pour optimiser sa prévoyance retraite et compléter ses revenus ? Cette décision dépend de vos objectifs : sécurité du capital, avantages fiscaux ou complément de revenu à long terme.
-						</p>
-
-						<h2>Comment choisir sa prévoyance retraite ?</h2>
-
-						<p>
-							Pour choisir un contrat adapté, il faut examiner plusieurs éléments :
-						</p>
-
-						<ul>
-							<li>L'étendue des garanties et les exclusions.</li>
-							<li>Le niveau du capital ou de la rente et le mode de versement.</li>
-							<li>Le coût des cotisations et les options supplémentaires.</li>
-							<li>Les conditions de sortie et les avantages fiscaux.</li>
-							<li>Votre situation familiale, âge et objectifs patrimoniaux.</li>
-						</ul>
-
-						<p>
-							Faire appel à un conseiller spécialisé permet de réaliser un diagnostic personnalisé et d'adapter votre couverture à vos besoins réels, afin de sécuriser vos proches et préserver votre autonomie.
-						</p>
-
-						<h2>Préparer sa retraite, c'est anticiper les imprévus</h2>
-
-						<p>
-							La prévoyance retraite n'est pas seulement un complément de revenus : elle protège contre les aléas de la vie, tout en permettant de préserver l'autonomie et la qualité de vie des retraités et de leurs proches. Qu'il s'agisse de contrats collectifs d'entreprise, d'assurances individuelles ou de solutions d'épargne comme l'assurance vie et le PER individuel, chacun peut trouver une formule adaptée.
-						</p>
-
-						<div class="article-callout">
-							<p>
-								Anticiper dès maintenant, se renseigner sur les garanties disponibles et ajuster sa couverture à ses besoins réels est la clé pour vivre sa retraite sereinement. La prévoyance retraite devient ainsi un outil de liberté et de sécurité, protégeant vos proches, préservant votre autonomie et garantissant la tranquillité d'esprit face à l'avenir.
-							</p>
-						</div>
-					</div>
-
-					<!-- Sidebar -->
-					<aside class="article-sidebar">
-						<div class="sidebar-card">
-							<h4>Articles de la même catégorie</h4>
-							<ul class="related-articles">
-								<li>
-									<a href="/blog/pel-ou-per">PEL ou PER : Quel investissement choisir pour 2025 ?</a>
-								</li>
-								<li>
-									<a href="/blog/ouvrir-per-retraite">Ouvrir un PER à la retraite : Guide pratique</a>
-								</li>
-								<li>
-									<a href="/blog/meilleurs-placement-pour-la-retraite">Les meilleurs placements pour optimiser votre retraite financière</a>
-								</li>
-								<li>
-									<a href="/blog/emprunter-apres-70-ans">Les enjeux du crédit après 70 ans</a>
-								</li>
-								<li>
-									<a href="/blog/cumuler-retraite-rsa">Cumul retraite et RSA : peut-on effectivement cumuler ?</a>
-								</li>
-								<li>
-									<a href="/blog/augmenter-sa-retraite">Comment optimiser vos revenus à la retraite</a>
-								</li>
-							</ul>
-						</div>
-
-						<div class="sidebar-card sidebar-cta">
-							<h4>Besoin de conseils ?</h4>
-							<p>Nos experts sont là pour vous accompagner dans vos choix de prévoyance.</p>
-							<a href="/contact" class="btn btn-primary">Nous contacter</a>
-						</div>
-					</aside>
-				</div>
-			</div>
-		</article>
-	</main>
+		<Fragment slot="sidebar">
+			<li>
+				<a href="/blog/pel-ou-per">PEL ou PER : Quel investissement choisir pour 2025 ?</a>
+			</li>
+			<li>
+				<a href="/blog/ouvrir-per-retraite">Ouvrir un PER a la retraite : Guide pratique</a>
+			</li>
+			<li>
+				<a href="/blog/meilleurs-placement-pour-la-retraite">Les meilleurs placements pour optimiser votre retraite financiere</a>
+			</li>
+			<li>
+				<a href="/blog/emprunter-apres-70-ans">Les enjeux du credit apres 70 ans</a>
+			</li>
+			<li>
+				<a href="/blog/cumuler-retraite-rsa">Cumul retraite et RSA : peut-on effectivement cumuler ?</a>
+			</li>
+			<li>
+				<a href="/blog/augmenter-sa-retraite">Comment optimiser vos revenus a la retraite</a>
+			</li>
+		</Fragment>
+	</BlogArticle>
 	<Footer />
 </Layout>
-
-<style>
-	.article-hero {
-		background: var(--bg-white);
-		padding: 60px 0;
-	}
-
-	.article-hero-grid {
-		display: grid;
-		grid-template-columns: 400px 1fr;
-		gap: 50px;
-		align-items: center;
-	}
-
-	.article-hero-image {
-		border-radius: 12px;
-		overflow: hidden;
-		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-	}
-
-	.article-hero-image img {
-		width: 100%;
-		height: auto;
-		display: block;
-	}
-
-	.article-hero-content {
-		display: flex;
-		flex-direction: column;
-		gap: 20px;
-	}
-
-	.article-category {
-		display: inline-block;
-		color: var(--primary-blue);
-		font-size: 13px;
-		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 1px;
-		width: fit-content;
-	}
-
-	.article-category:hover {
-		color: #6ab8cc;
-	}
-
-	.article-hero h1 {
-		font-size: 32px;
-		line-height: 1.3;
-		color: var(--text-dark);
-		margin: 0;
-	}
-
-	.article-meta-info {
-		display: flex;
-		align-items: center;
-		gap: 20px;
-		flex-wrap: wrap;
-	}
-
-	.article-date {
-		font-size: 14px;
-		color: var(--primary-blue);
-	}
-
-	.article-read-time {
-		font-size: 14px;
-		color: var(--text-light);
-		display: flex;
-		align-items: center;
-		gap: 5px;
-	}
-
-	.article-read-time::before {
-		content: '📖';
-		font-size: 14px;
-	}
-
-	.article-share {
-		display: flex;
-		align-items: center;
-		gap: 15px;
-		margin-top: 10px;
-		padding-top: 20px;
-		border-top: 1px solid var(--border-light);
-	}
-
-	.article-share span {
-		font-size: 14px;
-		color: var(--text-dark);
-		font-weight: 500;
-	}
-
-	.share-buttons {
-		display: flex;
-		gap: 10px;
-	}
-
-	.share-btn {
-		width: 36px;
-		height: 36px;
-		border-radius: 50%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		color: white;
-		transition: transform 0.2s ease;
-	}
-
-	.share-btn:hover {
-		transform: scale(1.1);
-	}
-
-	.share-btn.facebook {
-		background: #1877f2;
-	}
-
-	.share-btn.twitter {
-		background: #1da1f2;
-	}
-
-	.share-btn.linkedin {
-		background: #0a66c2;
-	}
-
-	.article-content {
-		padding: 50px 0;
-	}
-
-	.article-wrapper {
-		display: grid;
-		grid-template-columns: 1fr 320px;
-		gap: 50px;
-		align-items: start;
-	}
-
-	.article-body {
-		max-width: 100%;
-	}
-
-	.article-intro {
-		font-size: 18px;
-		line-height: 1.8;
-		color: var(--text-dark);
-		margin-bottom: 30px;
-	}
-
-	.article-body p {
-		font-size: 16px;
-		line-height: 1.8;
-		color: var(--text-light);
-		margin-bottom: 25px;
-	}
-
-	.article-body h2 {
-		font-size: 28px;
-		margin: 50px 0 25px;
-		color: var(--text-dark);
-		padding-bottom: 15px;
-		border-bottom: 2px solid var(--primary-blue);
-	}
-
-	.article-body h3 {
-		font-size: 22px;
-		margin: 35px 0 20px;
-		color: var(--text-dark);
-	}
-
-	.article-body ul {
-		margin: 0 0 30px 0;
-		padding-left: 0;
-		list-style: none;
-	}
-
-	.article-body ul li {
-		position: relative;
-		padding-left: 25px;
-		margin-bottom: 15px;
-		font-size: 16px;
-		line-height: 1.7;
-		color: var(--text-light);
-	}
-
-	.article-body ul li::before {
-		content: '';
-		position: absolute;
-		left: 0;
-		top: 10px;
-		width: 8px;
-		height: 8px;
-		background: var(--primary-blue);
-		border-radius: 50%;
-	}
-
-	.article-body ul li strong {
-		color: var(--text-dark);
-	}
-
-	.article-body a {
-		color: #87d0e3;
-		text-decoration: underline;
-	}
-
-	.article-body a:hover {
-		color: var(--primary-blue);
-	}
-
-	.article-callout {
-		background: var(--bg-light);
-		border-left: 4px solid var(--primary-blue);
-		padding: 25px 30px;
-		border-radius: 0 12px 12px 0;
-		margin: 40px 0;
-	}
-
-	.article-callout p {
-		margin: 0;
-		font-size: 16px;
-		font-style: italic;
-	}
-
-	/* Sidebar */
-	.article-sidebar {
-		position: sticky;
-		top: 100px;
-	}
-
-	.sidebar-card {
-		background: var(--bg-light);
-		border-radius: 16px;
-		padding: 25px;
-		margin-bottom: 25px;
-	}
-
-	.sidebar-card h4 {
-		font-size: 18px;
-		margin-bottom: 20px;
-		color: var(--text-dark);
-	}
-
-	.related-articles {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-	}
-
-	.related-articles li {
-		margin-bottom: 15px;
-		padding-bottom: 15px;
-		border-bottom: 1px solid var(--border-light);
-	}
-
-	.related-articles li:last-child {
-		margin-bottom: 0;
-		padding-bottom: 0;
-		border-bottom: none;
-	}
-
-	.related-articles a {
-		font-size: 15px;
-		color: var(--text-dark);
-		line-height: 1.5;
-		display: block;
-	}
-
-	.related-articles a:hover {
-		color: var(--primary-blue);
-	}
-
-	.sidebar-cta {
-		background: linear-gradient(135deg, var(--primary-blue) 0%, #5ca8bc 100%);
-		color: var(--text-white);
-	}
-
-	.sidebar-cta h4 {
-		color: var(--text-white);
-	}
-
-	.sidebar-cta p {
-		font-size: 14px;
-		margin-bottom: 20px;
-		opacity: 0.9;
-	}
-
-	.sidebar-cta .btn-primary {
-		background: var(--bg-white);
-		color: var(--primary-blue);
-		width: 100%;
-	}
-
-	.sidebar-cta .btn-primary:hover {
-		background: var(--bg-light);
-	}
-
-	@media (max-width: 992px) {
-		.article-hero-grid {
-			grid-template-columns: 1fr;
-			gap: 30px;
-		}
-
-		.article-hero-image {
-			order: -1;
-		}
-
-		.article-wrapper {
-			grid-template-columns: 1fr;
-		}
-
-		.article-sidebar {
-			position: static;
-		}
-
-		.article-hero h1 {
-			font-size: 28px;
-		}
-	}
-
-	@media (max-width: 576px) {
-		.article-hero {
-			padding: 40px 0;
-		}
-
-		.article-hero h1 {
-			font-size: 24px;
-		}
-
-		.article-body h2 {
-			font-size: 24px;
-		}
-
-		.article-body h3 {
-			font-size: 20px;
-		}
-
-		.article-share {
-			flex-direction: column;
-			align-items: flex-start;
-			gap: 10px;
-		}
-	}
-</style>
