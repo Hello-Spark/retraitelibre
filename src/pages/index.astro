@@ -1,0 +1,665 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const cles = [
+	{
+		title: "Transmettre",
+		description: "Préparez la transmission de votre patrimoine à vos proches",
+		icon: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>`,
+		href: "/transmettre",
+		color: "#e74c3c"
+	},
+	{
+		title: "Investir",
+		description: "Faites fructifier votre épargne pour une retraite sereine",
+		icon: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>`,
+		href: "/investissement",
+		color: "#27ae60"
+	},
+	{
+		title: "Profiter",
+		description: "Découvrez comment profiter pleinement de votre retraite",
+		icon: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>`,
+		href: "/profiter",
+		color: "#f39c12"
+	},
+	{
+		title: "Aménager",
+		description: "Adaptez votre logement pour bien vieillir chez vous",
+		icon: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>`,
+		href: "/amenager",
+		color: "#3498db"
+	}
+];
+
+const articles = [
+	{
+		title: "Comment bien préparer sa retraite dès 50 ans ?",
+		excerpt: "Découvrez les étapes clés pour anticiper sereinement votre départ à la retraite.",
+		image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
+		category: "Epargner",
+		href: "/articles/preparer-retraite-50-ans"
+	},
+	{
+		title: "Les meilleurs placements pour les seniors",
+		excerpt: "Quels investissements privilégier pour sécuriser et faire fructifier son patrimoine.",
+		image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&h=400&fit=crop",
+		category: "Investissement",
+		href: "/articles/meilleurs-placements-seniors"
+	},
+	{
+		title: "Voyager à la retraite : nos conseils",
+		excerpt: "Profitez de votre temps libre pour découvrir le monde en toute sérénité.",
+		image: "https://images.unsplash.com/photo-1503220317375-aaad61436b1b?w=600&h=400&fit=crop",
+		category: "Profiter",
+		href: "/articles/voyager-retraite"
+	}
+];
+
+const faqs = [
+	{
+		question: "À quel âge dois-je commencer à préparer ma retraite ?",
+		answer: "Il n'est jamais trop tôt pour commencer ! Idéalement, dès 40-45 ans, vous devriez commencer à réfléchir à votre stratégie de retraite. Cela vous laisse le temps de constituer une épargne solide et de prendre les bonnes décisions patrimoniales."
+	},
+	{
+		question: "Comment estimer le montant de ma future retraite ?",
+		answer: "Vous pouvez utiliser les simulateurs officiels comme celui de l'Assurance Retraite ou Info-retraite.fr. Ces outils prennent en compte votre carrière, vos cotisations et vous donnent une estimation de votre pension future."
+	},
+	{
+		question: "Quels sont les meilleurs placements pour compléter ma retraite ?",
+		answer: "Les placements les plus adaptés dépendent de votre situation. L'assurance-vie, le PER (Plan d'Épargne Retraite), l'immobilier locatif et les SCPI sont généralement recommandés. Diversifier vos investissements reste la meilleure stratégie."
+	}
+];
+---
+
+<Layout title="Retraite Libre - Préparez votre retraite en toute sérénité">
+	<Header />
+	<main>
+		<!-- Hero Section -->
+		<section class="hero">
+			<img src="https://cdn.prod.website-files.com/679ce3ad6891cff458859ab4/67f8d6f0b17c6fcf7bb7e49b_Banniere%20site.png" alt="Retraite Libre - Préparez votre retraite en toute sérénité" class="hero-banner" />
+			<div class="hero-overlay">
+				<div class="hero-content">
+					<h1>Préparez votre retraite<br>en toute sérénité</h1>
+					<a href="/contact" class="btn btn-light">Contacter</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- À propos -->
+		<section class="about">
+			<div class="container">
+				<div class="about-grid">
+					<div class="about-text">
+						<div class="about-label">
+							<span class="label-line"></span>
+							<span class="label-text">À PROPOS DE NOUS</span>
+						</div>
+						<h2>On vous aide à avoir une retraite libre</h2>
+						<p>
+							Retraite Libre est votre guide de référence pour préparer, anticiper et vivre sereinement votre retraite.
+							Que vous soyez en fin de carrière ou déjà retraité, nous vous accompagnons avec des conseils pratiques,
+							des guides détaillés et des informations fiables pour vous aider à prendre les meilleures décisions.
+						</p>
+						<p>
+							Notre mission : vous donner toutes les clés pour une retraite épanouie, libre et sans soucis.
+						</p>
+						<a href="#contenus" class="btn btn-primary">Je découvre les meilleurs contenus du moment</a>
+					</div>
+					<div class="about-image">
+						<img src="https://cdn.prod.website-files.com/679ce3ad6891cff458859ab4/67f8dc4f04f2b9036fb72a5b_Senior%20vacanes.png" alt="Couple de seniors en vacances" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Les clés -->
+		<section class="keys" id="contenus">
+			<div class="container">
+				<div class="keys-layout">
+					<div class="keys-content">
+						<h2>Les clés pour préparer et profiter de votre retraite</h2>
+						<div class="keys-list">
+							<div class="key-item">
+								<h3>Transmettre votre patrimoine</h3>
+								<p>Des conseils pour préparer efficacement la transmission de vos biens et optimiser vos héritages.</p>
+							</div>
+							<div class="key-item">
+								<h3>Investir intelligemment</h3>
+								<p>Des solutions d'investissement sur-mesure pour générer des revenus passifs et sécuriser votre avenir financier.</p>
+							</div>
+							<div class="key-item">
+								<h3>Profiter pleinement de votre retraite</h3>
+								<p>Des stratégies pour maximiser vos revenus et profiter de cette nouvelle étape de manière épanouie.</p>
+							</div>
+							<div class="key-item">
+								<h3>Aménager votre cadre de vie</h3>
+								<p>Des idées et des ressources pour adapter votre logement à vos besoins et faciliter votre quotidien à la retraite.</p>
+							</div>
+						</div>
+					</div>
+					<div class="keys-image">
+						<img src="https://cdn.prod.website-files.com/679ce3ad6891cff458859ab4/67d44a7194e3dd2c52fd7def_e041a1ba-3f39-444d-9d8b-5eba1f5fba94.jpg" alt="Couple de retraités heureux" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Articles -->
+		<section class="articles">
+			<div class="container">
+				<div class="section-header">
+					<h2>Les sujets du jour</h2>
+					<p>Nos derniers articles pour vous accompagner</p>
+				</div>
+				<div class="articles-grid">
+					{articles.map(article => (
+						<a href={article.href} class="article-card">
+							<div class="article-image">
+								<img src={article.image} alt={article.title} />
+								<span class="article-category">{article.category}</span>
+							</div>
+							<div class="article-content">
+								<h3>{article.title}</h3>
+								<p>{article.excerpt}</p>
+								<span class="article-link">Lire l'article</span>
+							</div>
+						</a>
+					))}
+				</div>
+			</div>
+		</section>
+
+		<!-- FAQ -->
+		<section class="faq">
+			<div class="container">
+				<div class="section-header">
+					<h2>Questions fréquentes</h2>
+					<p>Les réponses aux questions que vous vous posez</p>
+				</div>
+				<div class="faq-list">
+					{faqs.map((faq, index) => (
+						<div class="faq-item">
+							<button class="faq-question" data-index={index}>
+								<span>{faq.question}</span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+							</button>
+							<div class="faq-answer">
+								<p>{faq.answer}</p>
+							</div>
+						</div>
+					))}
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section class="cta">
+			<div class="container">
+				<div class="cta-content">
+					<h2>Besoin d'un accompagnement personnalisé ?</h2>
+					<p>Nos experts sont là pour répondre à vos questions et vous guider dans vos démarches.</p>
+					<a href="/contact" class="btn btn-primary">Nous contacter</a>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	/* Hero */
+	.hero {
+		position: relative;
+		padding: 0;
+		max-height: 500px;
+		overflow: hidden;
+	}
+
+	.hero-banner {
+		width: 100%;
+		height: auto;
+		display: block;
+		object-fit: cover;
+	}
+
+	.hero-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		display: flex;
+		align-items: center;
+		padding-left: 10%;
+	}
+
+	.hero-content {
+		max-width: 500px;
+	}
+
+	.hero-content h1 {
+		font-size: 42px;
+		font-weight: 700;
+		color: var(--text-dark);
+		line-height: 1.2;
+		margin-bottom: 25px;
+		text-shadow: 0 2px 10px rgba(255, 255, 255, 0.5);
+	}
+
+	.btn-light {
+		background: rgba(255, 255, 255, 0.9);
+		color: var(--primary-blue);
+		border: 2px solid var(--primary-blue);
+		padding: 12px 30px;
+		font-weight: 600;
+	}
+
+	.btn-light:hover {
+		background: var(--primary-blue);
+		color: var(--text-white);
+	}
+
+	/* About */
+	.about {
+		padding: 80px 0;
+		background: var(--bg-light);
+	}
+
+	.about-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 60px;
+		align-items: center;
+	}
+
+	.about-text {
+		padding-right: 20px;
+	}
+
+	.about-label {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		margin-bottom: 20px;
+	}
+
+	.label-line {
+		width: 40px;
+		height: 2px;
+		background: var(--primary-blue);
+	}
+
+	.label-text {
+		font-size: 13px;
+		font-weight: 600;
+		color: var(--text-light);
+		letter-spacing: 1px;
+	}
+
+	.about h2 {
+		font-size: 36px;
+		margin-bottom: 25px;
+		color: var(--text-dark);
+	}
+
+	.about p {
+		font-size: 16px;
+		color: var(--text-light);
+		line-height: 1.8;
+		margin-bottom: 20px;
+	}
+
+	.btn-orange {
+		background: var(--accent-orange);
+		color: var(--text-white);
+		margin-top: 15px;
+	}
+
+	.btn-orange:hover {
+		background: #e55a2b;
+		transform: translateY(-2px);
+		box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+	}
+
+	.about-image {
+		border-radius: 16px;
+		overflow: hidden;
+		box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+	}
+
+	.about-image img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	/* Section Header */
+	.section-header {
+		text-align: center;
+		margin-bottom: 40px;
+	}
+
+	.section-header h2 {
+		margin-bottom: 15px;
+	}
+
+	.section-header p {
+		font-size: 17px;
+		color: var(--text-light);
+	}
+
+	/* Keys */
+	.keys {
+		padding: 80px 0;
+		background: var(--bg-light);
+	}
+
+	.keys-layout {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 60px;
+		align-items: center;
+	}
+
+	.keys-content h2 {
+		font-size: 36px;
+		margin-bottom: 40px;
+		color: var(--text-dark);
+	}
+
+	.keys-list {
+		display: flex;
+		flex-direction: column;
+		gap: 25px;
+	}
+
+	.key-item {
+		padding-left: 25px;
+		border-left: 3px solid var(--primary-blue);
+	}
+
+	.key-item h3 {
+		font-size: 18px;
+		margin-bottom: 8px;
+		color: var(--text-dark);
+		font-weight: 600;
+	}
+
+	.key-item p {
+		font-size: 15px;
+		color: var(--text-light);
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	.keys-image {
+		border-radius: 16px;
+		overflow: hidden;
+		box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+	}
+
+	.keys-image img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	/* Articles */
+	.articles {
+		padding: 80px 0;
+		background: var(--bg-white);
+	}
+
+	.articles-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 30px;
+	}
+
+	.article-card {
+		background: var(--bg-white);
+		border-radius: 16px;
+		overflow: hidden;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+		transition: all 0.3s ease;
+	}
+
+	.article-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+	}
+
+	.article-image {
+		position: relative;
+		height: 200px;
+		overflow: hidden;
+	}
+
+	.article-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.3s ease;
+	}
+
+	.article-card:hover .article-image img {
+		transform: scale(1.05);
+	}
+
+	.article-category {
+		position: absolute;
+		top: 15px;
+		left: 15px;
+		background: var(--primary-blue);
+		color: var(--text-white);
+		padding: 6px 14px;
+		border-radius: 20px;
+		font-size: 12px;
+		font-weight: 600;
+	}
+
+	.article-content {
+		padding: 25px;
+	}
+
+	.article-content h3 {
+		font-size: 18px;
+		margin-bottom: 12px;
+		line-height: 1.4;
+	}
+
+	.article-content p {
+		font-size: 14px;
+		color: var(--text-light);
+		line-height: 1.6;
+		margin-bottom: 15px;
+	}
+
+	.article-link {
+		color: var(--primary-blue);
+		font-weight: 600;
+		font-size: 14px;
+	}
+
+	/* FAQ */
+	.faq {
+		padding: 80px 0;
+		background: var(--bg-light);
+	}
+
+	.faq-list {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.faq-item {
+		background: var(--bg-white);
+		border-radius: 12px;
+		margin-bottom: 15px;
+		overflow: hidden;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+	}
+
+	.faq-question {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px 25px;
+		background: none;
+		border: none;
+		cursor: pointer;
+		text-align: left;
+		font-size: 16px;
+		font-weight: 600;
+		color: var(--text-dark);
+		transition: all 0.3s ease;
+	}
+
+	.faq-question:hover {
+		color: var(--primary-blue);
+	}
+
+	.faq-question svg {
+		transition: transform 0.3s ease;
+		flex-shrink: 0;
+		margin-left: 15px;
+	}
+
+	.faq-item.active .faq-question svg {
+		transform: rotate(180deg);
+	}
+
+	.faq-answer {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.3s ease;
+	}
+
+	.faq-item.active .faq-answer {
+		max-height: 300px;
+	}
+
+	.faq-answer p {
+		padding: 0 25px 20px;
+		font-size: 15px;
+		color: var(--text-light);
+		line-height: 1.7;
+		margin: 0;
+	}
+
+	/* CTA */
+	.cta {
+		padding: 80px 0;
+		background: linear-gradient(135deg, var(--primary-blue) 0%, #5ca8bc 100%);
+	}
+
+	.cta-content {
+		text-align: center;
+		color: var(--text-white);
+	}
+
+	.cta h2 {
+		color: var(--text-white);
+		margin-bottom: 15px;
+	}
+
+	.cta p {
+		font-size: 18px;
+		opacity: 0.9;
+		margin-bottom: 30px;
+	}
+
+	.cta .btn-primary {
+		background: var(--bg-white);
+		color: var(--primary-blue);
+	}
+
+	.cta .btn-primary:hover {
+		background: var(--bg-light);
+		transform: translateY(-2px);
+	}
+
+	/* Responsive */
+	@media (max-width: 992px) {
+		.hero-grid {
+			grid-template-columns: 1fr;
+			gap: 40px;
+		}
+
+		.hero h1 {
+			font-size: 36px;
+		}
+
+		.hero-image {
+			order: -1;
+		}
+
+		.about-grid {
+			grid-template-columns: 1fr;
+			gap: 40px;
+		}
+
+		.about-text {
+			padding-right: 0;
+			text-align: center;
+		}
+
+		.about-label {
+			justify-content: center;
+		}
+
+		.about-image {
+			order: -1;
+		}
+
+		.keys-layout {
+			grid-template-columns: 1fr;
+			gap: 40px;
+		}
+
+		.keys-image {
+			order: -1;
+		}
+
+		.articles-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@media (max-width: 576px) {
+		.hero {
+			padding: 50px 0;
+		}
+
+		.hero h1 {
+			font-size: 28px;
+		}
+
+		.keys-content h2 {
+			font-size: 28px;
+		}
+	}
+</style>
+
+<script>
+	// FAQ Accordion
+	const faqItems = document.querySelectorAll('.faq-item');
+
+	faqItems.forEach(item => {
+		const question = item.querySelector('.faq-question');
+		question?.addEventListener('click', () => {
+			// Close other items
+			faqItems.forEach(otherItem => {
+				if (otherItem !== item) {
+					otherItem.classList.remove('active');
+				}
+			});
+			// Toggle current item
+			item.classList.toggle('active');
+		});
+	});
+</script>
