@@ -1,0 +1,196 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Gestion des cookies - Retraite Libre">
+	<Header />
+	<main>
+		<!-- Hero Section -->
+		<section class="page-hero">
+			<div class="container">
+				<h1>Gestion des cookies</h1>
+			</div>
+		</section>
+
+		<!-- Content Section -->
+		<section class="content-section">
+			<div class="container">
+				<div class="content">
+					<p class="intro">
+						Le site <strong>retraite-libre.fr</strong> utilise des cookies pour améliorer l'expérience utilisateur, réaliser des analyses statistiques et permettre le partage sur les réseaux sociaux. Cette page vous explique ce que sont les cookies, comment nous les utilisons et comment vous pouvez les gérer.
+					</p>
+
+					<h2>Qu'est-ce qu'un cookie ?</h2>
+					<p>
+						Un cookie est un petit fichier texte déposé sur votre terminal (ordinateur, smartphone, tablette) lors de la visite d'un site web. Il permet de mémoriser des informations relatives à votre navigation et de faciliter votre expérience utilisateur lors de vos prochaines visites.
+					</p>
+
+					<h2>Types de cookies utilisés</h2>
+
+					<h3>Cookies strictement nécessaires</h3>
+					<p>
+						Ces cookies sont indispensables au fonctionnement du site. Ils vous permettent de naviguer et d'utiliser les fonctionnalités essentielles du site. Sans ces cookies, certaines parties du site ne peuvent pas fonctionner correctement.
+					</p>
+
+					<h3>Cookies de performance et d'analyse</h3>
+					<p>
+						Ces cookies nous permettent de comprendre comment les visiteurs utilisent notre site en collectant des informations de manière anonyme. Ils nous aident à améliorer le fonctionnement du site et à optimiser votre expérience.
+					</p>
+					<p><strong>Exemples :</strong> Google Analytics</p>
+
+					<h3>Cookies de fonctionnalité</h3>
+					<p>
+						Ces cookies permettent au site de mémoriser vos choix (comme votre langue, votre région) et offrent des fonctionnalités améliorées et personnalisées.
+					</p>
+
+					<h3>Cookies de partage social</h3>
+					<p>
+						Ces cookies facilitent le partage de contenu sur les réseaux sociaux (Facebook, Twitter, LinkedIn, Instagram). Ils peuvent suivre votre navigation sur différents sites.
+					</p>
+
+					<h2>Durée de conservation des cookies</h2>
+					<p>
+						Les cookies ont une durée de vie limitée. Certains sont des cookies de session (supprimés à la fermeture du navigateur), d'autres peuvent être conservés jusqu'à 13 mois selon leur finalité.
+					</p>
+
+					<h2>Comment gérer vos cookies ?</h2>
+					<p>
+						Vous avez la possibilité d'accepter, de refuser ou de supprimer les cookies à tout moment en configurant votre navigateur.
+					</p>
+
+					<h3>Configuration selon votre navigateur</h3>
+					<ul>
+						<li>
+							<strong>Google Chrome :</strong> Menu > Paramètres > Confidentialité et sécurité > Cookies et autres données de sites
+						</li>
+						<li>
+							<strong>Mozilla Firefox :</strong> Menu > Options > Vie privée et sécurité > Cookies et données de sites
+						</li>
+						<li>
+							<strong>Safari :</strong> Préférences > Confidentialité > Gérer les données de site web
+						</li>
+						<li>
+							<strong>Microsoft Edge :</strong> Paramètres > Confidentialité, recherche et services > Cookies et données de sites
+						</li>
+					</ul>
+
+					<h2>Conséquences du refus des cookies</h2>
+					<p>
+						Le refus de certains cookies peut limiter l'accès à certaines fonctionnalités du site et affecter votre expérience de navigation. Les cookies strictement nécessaires ne peuvent pas être désactivés car ils sont essentiels au fonctionnement du site.
+					</p>
+
+					<h2>Modification de la politique de cookies</h2>
+					<p>
+						Nous nous réservons le droit de modifier cette politique de cookies à tout moment. Toute modification sera publiée sur cette page avec une date de mise à jour.
+					</p>
+
+					<h2>Contact</h2>
+					<p>
+						Pour toute question concernant notre politique de cookies, vous pouvez nous contacter à l'adresse : <a href="mailto:contact@retraite-libre.fr">contact@retraite-libre.fr</a>
+					</p>
+
+					<p class="update-date"><strong>Dernière mise à jour :</strong> Février 2026</p>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	.page-hero {
+		background: var(--bg-light);
+		padding: 60px 0;
+		text-align: center;
+	}
+
+	.page-hero h1 {
+		font-size: 42px;
+		margin-bottom: 15px;
+		color: var(--text-dark);
+	}
+
+	.content-section {
+		padding: 60px 0;
+		background: var(--bg-white);
+	}
+
+	.content {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.intro {
+		font-size: 16px;
+		line-height: 1.8;
+		margin-bottom: 30px;
+		color: var(--text-light);
+	}
+
+	.content h2 {
+		font-size: 28px;
+		margin-top: 40px;
+		margin-bottom: 20px;
+		color: var(--text-dark);
+	}
+
+	.content h3 {
+		font-size: 22px;
+		margin-top: 30px;
+		margin-bottom: 15px;
+		color: var(--text-dark);
+	}
+
+	.content p {
+		font-size: 16px;
+		line-height: 1.8;
+		margin-bottom: 15px;
+		color: var(--text-light);
+	}
+
+	.content ul {
+		margin: 20px 0;
+		padding-left: 30px;
+	}
+
+	.content ul li {
+		font-size: 16px;
+		line-height: 1.8;
+		margin-bottom: 10px;
+		color: var(--text-light);
+	}
+
+	.content a {
+		color: var(--primary-blue);
+		text-decoration: none;
+		font-weight: 600;
+	}
+
+	.content a:hover {
+		text-decoration: underline;
+	}
+
+	.update-date {
+		margin-top: 40px;
+		padding-top: 20px;
+		border-top: 1px solid #e0e0e0;
+		font-style: italic;
+		color: var(--text-light);
+	}
+
+	@media (max-width: 576px) {
+		.page-hero h1 {
+			font-size: 32px;
+		}
+
+		.content h2 {
+			font-size: 24px;
+		}
+
+		.content h3 {
+			font-size: 20px;
+		}
+	}
+</style>

@@ -1,0 +1,155 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="À propos de nous - Retraite Libre">
+	<Header />
+	<main>
+		<!-- Hero Section -->
+		<section class="page-hero">
+			<div class="container">
+				<h1>À propos de nous</h1>
+			</div>
+		</section>
+
+		<!-- Content Section -->
+		<section class="content-section">
+			<div class="container">
+				<div class="content">
+					<p class="intro">
+						Bienvenue sur <strong>Retraite Libre</strong>, la plateforme dédiée à ceux qui souhaitent vivre pleinement leur retraite. Nous avons créé ce site pour accompagner les seniors dans cette nouvelle étape de vie.
+					</p>
+
+					<h2>Notre mission</h2>
+					<p>
+						Notre objectif est de vous aider à <strong>faire des choix éclairés, rester informé, actif et profiter pleinement de votre temps libre</strong>. Nous croyons que la retraite n'est pas une fin, mais <strong>un nouveau commencement</strong> - une opportunité de réaliser vos projets et de vivre selon vos aspirations.
+					</p>
+
+					<h2>Ce que nous vous proposons</h2>
+					<ul>
+						<li>Des <strong>articles pratiques</strong> sur la retraite et ses enjeux</li>
+						<li>Des <strong>conseils en gestion financière</strong> et en investissement</li>
+						<li>Des <strong>idées d'activités</strong> pour rester engagé et actif</li>
+						<li>Des <strong>informations sur les droits, la santé et les services</strong> pour les seniors</li>
+						<li>Des <strong>témoignages inspirants</strong> et des histoires vécues</li>
+					</ul>
+
+					<h2>Notre engagement</h2>
+					<p>
+						Retraite Libre est <strong>un média indépendant, sans jargon ni parti pris</strong>. Nous privilégions la clarté et l'accompagnement bienveillant pour vous guider au quotidien.
+					</p>
+
+					<div class="volunteer-section">
+						<h2>Rejoignez-nous en tant que bénévole</h2>
+						<p>
+							Vous souhaitez contribuer à notre mission et partager votre expérience avec notre communauté ? Rejoignez notre équipe de bénévoles et participez à la création de contenus qui aident des milliers de seniors.
+						</p>
+						<a href="/contact" class="btn btn-primary">Nous contacter</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	.page-hero {
+		background: var(--bg-light);
+		padding: 60px 0;
+		text-align: center;
+	}
+
+	.page-hero h1 {
+		font-size: 42px;
+		margin-bottom: 15px;
+		color: var(--text-dark);
+	}
+
+	.content-section {
+		padding: 60px 0;
+		background: var(--bg-white);
+	}
+
+	.content {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.intro {
+		font-size: 18px;
+		line-height: 1.8;
+		margin-bottom: 30px;
+		color: var(--text-dark);
+	}
+
+	.content h2 {
+		font-size: 28px;
+		margin-top: 40px;
+		margin-bottom: 20px;
+		color: var(--text-dark);
+	}
+
+	.content p {
+		font-size: 16px;
+		line-height: 1.8;
+		margin-bottom: 20px;
+		color: var(--text-light);
+	}
+
+	.content ul {
+		margin: 20px 0;
+		padding-left: 30px;
+	}
+
+	.content ul li {
+		font-size: 16px;
+		line-height: 1.8;
+		margin-bottom: 10px;
+		color: var(--text-light);
+	}
+
+	.volunteer-section {
+		background: var(--bg-light);
+		padding: 30px;
+		border-radius: 16px;
+		margin-top: 40px;
+		text-align: center;
+	}
+
+	.volunteer-section h2 {
+		margin-top: 0;
+	}
+
+	.btn {
+		display: inline-block;
+		padding: 15px 30px;
+		border-radius: 8px;
+		font-weight: 600;
+		text-decoration: none;
+		transition: all 0.3s ease;
+		margin-top: 20px;
+	}
+
+	.btn-primary {
+		background: var(--primary-blue);
+		color: var(--bg-white);
+	}
+
+	.btn-primary:hover {
+		background: #2563eb;
+		transform: translateY(-2px);
+	}
+
+	@media (max-width: 576px) {
+		.page-hero h1 {
+			font-size: 32px;
+		}
+
+		.content h2 {
+			font-size: 24px;
+		}
+	}
+</style>

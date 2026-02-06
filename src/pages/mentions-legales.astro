@@ -1,0 +1,149 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Mentions légales - Retraite Libre">
+	<Header />
+	<main>
+		<!-- Hero Section -->
+		<section class="page-hero">
+			<div class="container">
+				<h1>Mentions légales</h1>
+			</div>
+		</section>
+
+		<!-- Content Section -->
+		<section class="content-section">
+			<div class="container">
+				<div class="content">
+					<p class="intro">
+						Conformément aux articles 6-III et 19 de la loi n°2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, les présentes mentions légales ont pour but d'informer les utilisateurs et visiteurs de <strong>retraite-libre.fr</strong> sur les informations relatives au site.
+					</p>
+
+					<h2>Éditeur du site</h2>
+					<p><strong>Raison sociale :</strong> Retraite Libre</p>
+					<p><strong>Adresse :</strong> [Adresse postale]</p>
+					<p><strong>Email de contact :</strong> <a href="mailto:contact@retraite-libre.fr">contact@retraite-libre.fr</a></p>
+					<p><strong>Téléphone :</strong> [Numéro de téléphone]</p>
+					<p><strong>Forme juridique :</strong> [Forme juridique]</p>
+					<p><strong>Numéro SIRET :</strong> [Numéro SIRET]</p>
+					<p><strong>Directeur de la publication :</strong> [Nom du directeur]</p>
+
+					<h2>Hébergement</h2>
+					<p><strong>Nom de l'hébergeur :</strong> [Nom de l'hébergeur]</p>
+					<p><strong>Adresse :</strong> [Adresse de l'hébergeur]</p>
+					<p><strong>Téléphone :</strong> [Téléphone de l'hébergeur]</p>
+					<p><strong>Site web :</strong> <a href="#">[Site web de l'hébergeur]</a></p>
+
+					<h2>Propriété intellectuelle</h2>
+					<p>
+						L'ensemble des contenus présents sur <strong>retraite-libre.fr</strong> (textes, images, logos, vidéos, etc.) est protégé par les lois sur la propriété intellectuelle. Toute reproduction ou adaptation, même partielle, nécessite une autorisation écrite préalable.
+					</p>
+					<p>
+						Les marques, logos, et autres signes distinctifs présents sur le site sont la propriété exclusive de Retraite Libre ou de leurs titulaires respectifs.
+					</p>
+
+					<h2>Données personnelles</h2>
+					<p>
+						Conformément au Règlement Général sur la Protection des Données (RGPD), les utilisateurs disposent d'un <strong>droit d'accès, de rectification et de suppression</strong> des données les concernant.
+					</p>
+					<p>
+						Pour exercer ces droits, vous pouvez nous contacter à l'adresse suivante : <a href="mailto:contact@retraite-libre.fr">contact@retraite-libre.fr</a>
+					</p>
+					<p>
+						Pour plus d'informations sur la gestion de vos données personnelles, consultez notre <a href="/cookies">politique de gestion des cookies</a>.
+					</p>
+
+					<h2>Cookies</h2>
+					<p>
+						Le site <strong>retraite-libre.fr</strong> utilise des cookies pour améliorer l'expérience utilisateur, réaliser des analyses statistiques et permettre le partage sur les réseaux sociaux.
+					</p>
+					<p>
+						Vous pouvez paramétrer votre navigateur pour refuser les cookies ou être informé de leur utilisation. Pour en savoir plus, consultez notre <a href="/cookies">page de gestion des cookies</a>.
+					</p>
+
+					<h2>Responsabilité</h2>
+					<p>
+						Les informations diffusées sur le site <strong>retraite-libre.fr</strong> sont fournies à titre indicatif. Nous ne garantissons pas l'exactitude, la complétude ou l'actualité des informations publiées.
+					</p>
+					<p>
+						L'utilisateur assume l'entière responsabilité de l'utilisation qu'il fait des informations présentes sur le site. Retraite Libre ne pourra être tenu responsable des dommages directs ou indirects résultant de l'utilisation du site.
+					</p>
+
+					<h2>Droit applicable</h2>
+					<p>
+						Les présentes mentions légales sont régies par le droit français. En cas de litige, les tribunaux français seront seuls compétents.
+					</p>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	.page-hero {
+		background: var(--bg-light);
+		padding: 60px 0;
+		text-align: center;
+	}
+
+	.page-hero h1 {
+		font-size: 42px;
+		margin-bottom: 15px;
+		color: var(--text-dark);
+	}
+
+	.content-section {
+		padding: 60px 0;
+		background: var(--bg-white);
+	}
+
+	.content {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.intro {
+		font-size: 16px;
+		line-height: 1.8;
+		margin-bottom: 30px;
+		color: var(--text-light);
+	}
+
+	.content h2 {
+		font-size: 28px;
+		margin-top: 40px;
+		margin-bottom: 20px;
+		color: var(--text-dark);
+	}
+
+	.content p {
+		font-size: 16px;
+		line-height: 1.8;
+		margin-bottom: 15px;
+		color: var(--text-light);
+	}
+
+	.content a {
+		color: var(--primary-blue);
+		text-decoration: none;
+		font-weight: 600;
+	}
+
+	.content a:hover {
+		text-decoration: underline;
+	}
+
+	@media (max-width: 576px) {
+		.page-hero h1 {
+			font-size: 32px;
+		}
+
+		.content h2 {
+			font-size: 24px;
+		}
+	}
+</style>
